@@ -14,7 +14,8 @@ document.getElementById("login-btn").addEventListener("click", function (e) {
 
   if (convertMoblieInt === mobileNumber && convertPinInt === pinNumber) {
     console.log("number and pin match");
+    window.location.href = "./home.html";
   } else {
-    console.log("Invalid pin or number");
+    alert("Invalid pin or number");
   }
 });

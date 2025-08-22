@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>home</title>
+    <!-- daisy ui cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="bg-[#f4f5f7] h-full">
+    <div class="bg-white max-w-lg mx-auto rounded-b-lg pb-6">
+      <!-- nav -->
+      <div
+        class="min-h-[50px] flex justify-between items-center border-b-1 border-gray-300 p-4"
+      >
+        <div class="flex justify-center items-center">
+          <img src="./assets/Group.png" class="h-[50px]" alt="" />
+          <div>
+            <h2 class="font-bold"><span>$45000</span></h2>
+            <p class="text-[14px] text-[#08080880]">
+              <span>Available Balance</span>
+            </p>
+          </div>
+        </div>
+        <div>
+          <button class="btn text-[#08080880]">
+            <span class="rotate-180"
+              ><i
+                class="fa-solid fa-arrow-right-from-bracket text-gray-600"
+              ></i></span
+            >Log Out
+          </button>
+        </div>
+      </div>
+      <!-- description -->
+      <div class="px-4 pt-8">
+        <h1 class="text-2xl font-bold">🔥 Welcome to Payooo!</h1>
+        <p class="text-[#08080880] pt-3 pb-6">
+          Enjoy easy and convenient financial services with us. <br />
+          Cashout charge is low and
+        </p>
+      </div>
+      <!-- card -->
+      <div class="grid grid-cols-3 gap-4 px-4">
+        <div
+          class="border-1 border-gray-200 h-[90px] px-4 py-3 flex flex-col justify-center items-center rounded-xl"
+        >
+          <img src="./assets/wallet1.png" alt="" />
+          <p class="text-[14px] pt-2 text-gray-600">Add Money</p>
+        </div>
+        <div
+          class="border-1 border-gray-200 h-[90px] px-4 py-3 flex flex-col justify-center items-center rounded-xl"
+        >
+          <img src="./assets/send1.png" alt="" />
+          <p class="text-[14px] pt-2 text-gray-600">Cash Out</p>
+        </div>
+        <div
+          class="border-1 border-gray-200 h-[90px] px-4 py-3 flex flex-col justify-center items-center rounded-xl"
+        >
+          <img src="./assets/money1.png" alt="" />
+          <p class="text-[14px] pt-2 text-gray-600">Transfer Money</p>
+        </div>
+        <div
+          class="border-1 border-gray-200 h-[90px] px-4 py-3 flex flex-col justify-center items-center rounded-xl"
+        >
+          <img src="./assets/bonus1.png" alt="" />
+          <p class="text-[14px] pt-2 text-gray-600">Get Bonus</p>
+        </div>
+        <div
+          class="border-1 border-gray-200 h-[90px] px-4 py-3 flex flex-col justify-center items-center rounded-xl"
+        >
+          <img src="./assets/purse1.png" alt="" />
+          <p class="text-[14px] pt-2 text-gray-600">pay Bill</p>
+        </div>
+        <div
+          class="border-1 border-gray-200 h-[90px] px-4 py-3 flex flex-col justify-center items-center rounded-xl"
+        >
+          <img src="./assets/transaction1.png" alt="" />
+          <p class="text-[14px] pt-2 text-gray-600">Transactions</p>
+        </div>
+      </div>
+    </div>
+    <!-- form sections -->
+    <div class="max-w-lg mx-auto mt-8 p-4">
+      <!-- add money -->
+      <div>
+        <h1 class="text-2xl font-bold mb-5">Add Money</h1>
+        <form action="" class="bg-white p-8 rounded-2xl flex flex-col gap-5">
+          <div>
+            <label class="font-semibold">Select a bank</label>
+            <select
+              class="select text-[#08080880] bg-[#f4f5f7] rounded-3xl border-none mt-3 w-full"
+            >
+              <option disabled selected>Pick a Bank</option>
+              <option>AB Bank</option>
+              <option>UCB Bank</option>
+              <option>ONE bank</option>
+            </select>
+          </div>
+          <div>
+            <label for="" class="font-semibold">Bank Account Number</label
+            ><br />
+            <input
+              type="text "
+              placeholder="Enter 11 Digit Account Number"
+              id="ac-number"
+              class="input w-full bg-[#f4f5f7] rounded-3xl border-none mt-3"
+            />
+          </div>
+          <div>
+            <label for="" class="font-semibold">Amount to Add</label><br />
+            <input
+              type="text "
+              placeholder="Add Amount"
+              id="add-amount"
+              class="input w-full bg-[#f4f5f7] rounded-3xl border-none mt-3"
+            />
+          </div>
+          <div>
+            <label for="" class="font-semibold">Pin Number</label><br />
+            <input
+              type="text "
+              placeholder="Enter 4-digit pin number"
+              id="pin-number"
+              class="input w-full bg-[#f4f5f7] rounded-3xl border-none mt-3"
+            />
+          </div>
+          <button
+            type="button"
+            class="btn bg-[#0874F2] text-white rounded-3xl w-full"
+            id="login-btn"
+          >
+            Add Money
+          </button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
