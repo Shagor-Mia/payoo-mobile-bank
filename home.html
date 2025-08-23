@@ -101,7 +101,7 @@
     <!-- form sections -->
     <div class="max-w-lg mx-auto mt-8 p-4">
       <!-- add money -->
-      <div id="add-money-form">
+      <div class="form" id="add-money-form">
         <h1 class="text-2xl font-bold mb-5">Add Money</h1>
         <form action="" class="bg-white p-8 rounded-2xl flex flex-col gap-5">
           <div>
@@ -154,7 +154,7 @@
         </form>
       </div>
       <!-- cash out -->
-      <div id="cash-out-form" style="display: none">
+      <div class="form" id="cash-out-form" style="display: none">
         <h1 class="text-2xl font-bold mb-5">Cash Out</h1>
         <form action="" class="bg-white p-8 rounded-2xl flex flex-col gap-5">
           <div>
@@ -190,6 +190,69 @@
             id="withdraw-money-btn"
           >
             Withdraw Money
+          </button>
+        </form>
+      </div>
+      <!-- transfer money -->
+      <div class="form" id="transfer-money-form" style="display: none">
+        <h1 class="text-2xl font-bold mb-5">Transfer Money</h1>
+        <form action="" class="bg-white p-8 rounded-2xl flex flex-col gap-5">
+          <div>
+            <label for="" class="font-semibold">User Account Number</label
+            ><br />
+            <input
+              type="number"
+              id="user-number"
+              placeholder="Enter 11 Digit Agent Number"
+              class="input w-full bg-[#f4f5f7] rounded-3xl border-none mt-3"
+            />
+          </div>
+          <div>
+            <label for="" class="font-semibold">Amount</label><br />
+            <input
+              type="number"
+              id="send-amount"
+              placeholder="Amount to Withdraw"
+              class="input w-full bg-[#f4f5f7] rounded-3xl border-none mt-3"
+            />
+          </div>
+          <div>
+            <label for="" class="font-semibold">Pin Number</label><br />
+            <input
+              type="number"
+              placeholder="Enter 4-digit pin number"
+              id="sended-pin-number"
+              class="input w-full bg-[#f4f5f7] rounded-3xl border-none mt-3"
+            />
+          </div>
+          <button
+            type="button"
+            class="btn bg-[#0874F2] text-white rounded-3xl w-full"
+            id="withdraw-money-btn"
+          >
+            Send Money
+          </button>
+        </form>
+      </div>
+      <!-- bonus -->
+      <div class="form" id="bonus-form" style="display: none">
+        <h1 class="text-2xl font-bold mb-5">Get Bonus</h1>
+        <form action="" class="bg-white p-8 rounded-2xl flex flex-col gap-5">
+          <div>
+            <label for="" class="font-semibold">Enter Bonus Coupon</label><br />
+            <input
+              id="coupon"
+              placeholder="Enter your coupon"
+              class="input w-full bg-[#f4f5f7] rounded-3xl border-none mt-3"
+            />
+          </div>
+
+          <button
+            type="button"
+            class="btn bg-[#0874F2] text-white rounded-3xl w-full"
+            id="getbonus-btn"
+          >
+            Get Bonus
           </button>
         </form>
       </div>

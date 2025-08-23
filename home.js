@@ -1,11 +1,41 @@
 const pin = 1234;
+
+//reuseable function
+// value parse
+function getInputValueNumber(id) {
+  const inputFieldValue = parseInt(document.getElementById(id).value);
+  return inputFieldValue;
+}
+// value
+function getInputValue(id) {
+  const inputFieldValue = document.getElementById(id).value;
+  return inputFieldValue;
+}
+// get innerText
+function getInnerText(id) {
+  const inputFieldValue = parseInt(document.getElementById(id).innerText);
+  return inputFieldValue;
+}
+// set innerText
+function setInnerText(id, value) {
+  document.getElementById(id).innerText = value;
+}
+// toggle function
+function toggleForm(id) {
+  const forms = document.getElementsByClassName("form");
+  for (const form of forms) {
+    form.style.display = "none";
+  }
+  document.getElementById(id).style.display = "block";
+}
+
 // add money
 document.getElementById("add-money-btn").addEventListener("click", function () {
-  const bank = document.getElementById("bank").value;
-  const accountNumber = document.getElementById("ac-number").value;
-  const addAmount = parseInt(document.getElementById("add-amount").value);
-  const pinNumber = parseInt(document.getElementById("pin-number").value);
-  const balance = parseInt(document.getElementById("balance").innerText);
+  const bank = getInputValue("bank");
+  const accountNumber = getInputValue("ac-number");
+  const addAmount = getInputValueNumber("add-amount");
+  const pinNumber = getInputValueNumber("pin-number");
+  const balance = getInnerText("balance");
 
   if (accountNumber.length < 11) {
     alert("enter valid ac-number");
@@ -17,21 +47,17 @@ document.getElementById("add-money-btn").addEventListener("click", function () {
   }
 
   const newAvailableBalance = balance + addAmount;
-  document.getElementById("balance").innerText = newAvailableBalance;
+  setInnerText("balance", newAvailableBalance);
 });
 
 // withdraw money
 document
   .getElementById("withdraw-money-btn")
   .addEventListener("click", function () {
-    const withdrawAmount = parseInt(
-      document.getElementById("Withdraw-amount").value
-    );
-    const agentNumber = document.getElementById("agent-number").value;
-    const pinNumber = parseInt(
-      document.getElementById("withdraw-pin-number").value
-    );
-    const balance = parseInt(document.getElementById("balance").innerText);
+    const withdrawAmount = getInputValueNumber("Withdraw-amount");
+    const agentNumber = getInputValue("agent-number");
+    const pinNumber = getInputValueNumber("withdraw-pin-number");
+    const balance = getInnerText("balance");
 
     if (agentNumber.length < 11) {
       alert("enter valid agent-number");
@@ -43,16 +69,21 @@ document
     }
 
     const newAvailableBalance = balance - withdrawAmount;
-    document.getElementById("balance").innerText = newAvailableBalance;
+    setInnerText("balance", newAvailableBalance);
   });
 
 // toggling features
 document.getElementById("add-btn").addEventListener("click", function () {
-  document.getElementById("cash-out-form").style.display = "none";
-  document.getElementById("add-money-form").style.display = "block";
+  toggleForm("add-money-form");
 });
 
 document.getElementById("cashout-btn").addEventListener("click", function () {
-  document.getElementById("cash-out-form").style.display = "block";
-  document.getElementById("add-money-form").style.display = "none";
+  toggleForm("cash-out-form");
+});
+
+document.getElementById("transfer-btn").addEventListener("click", function () {
+  toggleForm("transfer-money-form");
+});
+document.getElementById("bonus-btn").addEventListener("click", function () {
+  toggleForm("bonus-form");
 });
