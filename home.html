@@ -56,42 +56,42 @@
       <div class="grid grid-cols-3 gap-4 px-4">
         <div
           id="add-btn"
-          class="border-1 border-gray-200 h-[90px] px-4 py-3 flex flex-col justify-center items-center rounded-xl"
+          class="form-btn border-1 border-gray-200 h-[90px] px-4 py-3 flex flex-col justify-center items-center rounded-xl"
         >
           <img src="./assets/wallet1.png" alt="" />
           <p class="text-[14px] pt-2 text-gray-600">Add Money</p>
         </div>
         <div
           id="cashout-btn"
-          class="border-1 border-gray-200 h-[90px] px-4 py-3 flex flex-col justify-center items-center rounded-xl"
+          class="form-btn border-1 border-gray-200 h-[90px] px-4 py-3 flex flex-col justify-center items-center rounded-xl"
         >
           <img src="./assets/send1.png" alt="" />
           <p class="text-[14px] pt-2 text-gray-600">Cash Out</p>
         </div>
         <div
           id="transfer-btn"
-          class="border-1 border-gray-200 h-[90px] px-4 py-3 flex flex-col justify-center items-center rounded-xl"
+          class="form-btn border-1 border-gray-200 h-[90px] px-4 py-3 flex flex-col justify-center items-center rounded-xl"
         >
           <img src="./assets/money1.png" alt="" />
           <p class="text-[14px] pt-2 text-gray-600">Transfer Money</p>
         </div>
         <div
           id="bonus-btn"
-          class="border-1 border-gray-200 h-[90px] px-4 py-3 flex flex-col justify-center items-center rounded-xl"
+          class="form-btn border-1 border-gray-200 h-[90px] px-4 py-3 flex flex-col justify-center items-center rounded-xl"
         >
           <img src="./assets/bonus1.png" alt="" />
           <p class="text-[14px] pt-2 text-gray-600">Get Bonus</p>
         </div>
         <div
           id="paybill-btn"
-          class="border-1 border-gray-200 h-[90px] px-4 py-3 flex flex-col justify-center items-center rounded-xl"
+          class="form-btn border-1 border-gray-200 h-[90px] px-4 py-3 flex flex-col justify-center items-center rounded-xl"
         >
           <img src="./assets/purse1.png" alt="" />
           <p class="text-[14px] pt-2 text-gray-600">pay Bill</p>
         </div>
         <div
           id="transc-btn"
-          class="border-1 border-gray-200 h-[90px] px-4 py-3 flex flex-col justify-center items-center rounded-xl"
+          class="form-btn border-1 border-gray-200 h-[90px] px-4 py-3 flex flex-col justify-center items-center rounded-xl"
         >
           <img src="./assets/transaction1.png" alt="" />
           <p class="text-[14px] pt-2 text-gray-600">Transactions</p>
@@ -256,7 +256,69 @@
           </button>
         </form>
       </div>
+      <!-- pay bill -->
+      <div class="form" id="pay-bill-form" style="display: none">
+        <h1 class="text-2xl font-bold mb-5">Pay Bill</h1>
+        <form action="" class="bg-white p-8 rounded-2xl flex flex-col gap-5">
+          <div>
+            <label class="font-semibold">Select a bank</label>
+            <select
+              id="bank"
+              class="select text-[#08080880] bg-[#f4f5f7] rounded-3xl border-none mt-3 w-full"
+            >
+              <option disabled selected>Select to pay</option>
+              <option>AB Bank</option>
+              <option>UCB Bank</option>
+              <option>ONE bank</option>
+            </select>
+          </div>
+          <div>
+            <label for="" class="font-semibold">Biller Account Number</label
+            ><br />
+            <input
+              type="number"
+              id="biller-number"
+              placeholder="Enter AC\ Number"
+              class="input w-full bg-[#f4f5f7] rounded-3xl border-none mt-3"
+            />
+          </div>
+          <div>
+            <label for="" class="font-semibold">Amount to Pay</label><br />
+            <input
+              type="number"
+              id="pay-amount"
+              placeholder="add amount to pay"
+              class="input w-full bg-[#f4f5f7] rounded-3xl border-none mt-3"
+            />
+          </div>
+          <div>
+            <label for="" class="font-semibold">Pin Number</label><br />
+            <input
+              type="number"
+              placeholder="Enter 4-digit pin number"
+              id="pay-pin-number"
+              class="input w-full bg-[#f4f5f7] rounded-3xl border-none mt-3"
+            />
+          </div>
+          <button
+            type="button"
+            class="btn bg-[#0874F2] text-white rounded-3xl w-full"
+            id="pay-money-btn"
+          >
+            Pay Now
+          </button>
+        </form>
+      </div>
+      <!-- transaction -->
+      <div class="form" id="transaction-form" style="display: none">
+        <div class="flex justify-between items-center mb-5">
+          <h1 class="text-2xl font-bold">Transactions History</h1>
+          <p class="text-[#08080880]">View All</p>
+        </div>
+        <div id="transaction-container"></div>
+      </div>
     </div>
+
     <script src="./home.js"></script>
   </body>
 </html>
